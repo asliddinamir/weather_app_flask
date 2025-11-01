@@ -12,7 +12,6 @@ load_dotenv()
 
 app = Flask(__name__, static_folder='static', template_folder='templates')
 
-# Config: set OPENWEATHER_API_KEY as environment variable or put it here
 API_KEY = os.getenv("OPENWEATHER_API_KEY")
 
 
@@ -60,7 +59,6 @@ def send_static(path):
 
 @app.route('/weather/<city_name>', methods=['GET'])
 def get_weather(city_name):
-    # Fetch from OpenWeather (Current weather). Convert to XML and return.
     params = {
         'q': city_name,
         'appid': API_KEY,
@@ -99,7 +97,6 @@ def list_cities():
 
 @app.route('/cities', methods=['POST'])
 def create_city():
-    # Accept XML payload with <city><name>CityName</name></city>
     try:
         xml = ET.fromstring(request.data)
         name = xml.find('name').text if xml.find('name') is not None else None

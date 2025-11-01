@@ -1,4 +1,3 @@
-
 async function xmlFetch(url, options = {}){
   // default headers for XML
   options.headers = options.headers || {};
@@ -75,7 +74,6 @@ async function loadCities(){
     tbody.appendChild(tr);
   }
 
-  // attach listeners
   document.querySelectorAll('.del-btn').forEach(b=>b.onclick = async (e)=>{
     const id = e.target.dataset.id;
     if(!confirm('Delete city id ' + id + '?')) return;
