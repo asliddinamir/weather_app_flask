@@ -38,7 +38,7 @@ function showWeather(xmlDoc){
   result.innerHTML = `
     <div class="weather-icon">☁️</div>
     <div class="weather-details">
-      <h3>${city}, ${country}</h3>
+      <h3>${city}</h3>
       <p><strong>${temp}°C</strong> — ${desc}</p>
       <p>Humidity: ${humidity}% • Wind: ${wind} m/s</p>
     </div>
