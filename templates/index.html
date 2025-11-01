@@ -1,0 +1,39 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Weather Forecasting App</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+  <main class="app">
+    <header class="topbar">
+      <h1>WeatherNow</h1>
+      <p class="tagline">Live weather + Saved cities — XML & Flask</p>
+    </header>
+
+    <section class="search-card card">
+      <div class="search-row">
+        <input id="city-input" placeholder="Enter city (e.g., Kuala Lumpur)" />
+        <button id="search-btn">Search</button>
+        <button id="save-btn">Save City</button>
+      </div>
+      <div id="weather-result" class="weather-result card hidden"></div>
+    </section>
+
+    <section class="saved-card card">
+      <h2>Saved Cities</h2>
+      <table id="cities-table">
+        <thead><tr><th>ID</th><th>City</th><th>Actions</th></tr></thead>
+        <tbody></tbody>
+      </table>
+    </section>
+
+    <footer class="footer">Created by: Asliddin Amirov</footer>
+  </main>
+
+  <script src="/static/js/app.js"></script>
+</body>
+</html>
